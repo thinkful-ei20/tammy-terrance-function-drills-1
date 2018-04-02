@@ -7,14 +7,18 @@ const whoAmI = function(name, age) {
 	console.log(`My name is ${name} and I'm ${age} years old.`);
 	console.log(`I was born in ${yob}.`);
 
-	if (typeof age !== 'number') {
+	if (age < 0) {
 		throw new Error('Age cannot be negative.');
+	} 
+	if (name === undefined || age === undefined) {
+		throw new Error('Arguements not valid');
 	}
 }
 
 try {
 	whoAmI('Chris', 29);
-	whoAmI('Blake', -5);
+	whoAmI();
+	whoAmI('blake', -5);
 } catch(e) {
 	console.error(e.message);
 }
