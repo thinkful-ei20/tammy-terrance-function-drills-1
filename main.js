@@ -21,9 +21,9 @@ const whoAmI = function(name, age) {
 
 try {
 	whoAmI('Chris', 29);
-	whoAmI();
-	whoAmI('blake', -5);
-	whoAmI(test, 'test');
+	// whoAmI();
+	// whoAmI('blake', -5);
+	whoAmI(a, 'test');
 } catch(e) {
 	console.error(e.message);
 }
