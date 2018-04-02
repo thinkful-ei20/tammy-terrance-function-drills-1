@@ -13,12 +13,17 @@ const whoAmI = function(name, age) {
 	if (name === undefined || age === undefined) {
 		throw new Error('Arguements not valid');
 	}
+	if (typeof name !== 'string' || typeof age !== 'number') {
+		throw new Error('Not a valid data type, please try again.');
+	}
+
 }
 
 try {
 	whoAmI('Chris', 29);
 	whoAmI();
 	whoAmI('blake', -5);
+	whoAmI(test, 'test');
 } catch(e) {
 	console.error(e.message);
 }
